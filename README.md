@@ -73,13 +73,13 @@ Crea un nuevo usuario. **Este endpoint no requiere autenticación.**
 
 ## Restricciones de los Campos:
 
->firstName: 
+- >firstName: 
     Mínimo 3 caracteres.
->lastName: 
+- >lastName: 
     Mínimo 2 caracteres.
->email: 
+- >email: 
     Debe ser un correo electrónico válido.
->password: 
+- >password: 
     Mínimo 8 caracteres.
 
 
