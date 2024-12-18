@@ -17,7 +17,7 @@ Está desarrollada con **Express.js** y utiliza las siguientes herramientas y li
 ## 📌 **Base URL**
 
 `inovateprowebapis.com/api/v1`
-// Es una URL ejemplificativa, se protege la real para evitar inserciones maliciosas
+(URL ejemplificativa para proteger la real y evitar inserciones maliciosas)
 
 ---
 
@@ -70,6 +70,18 @@ Crea un nuevo usuario. **Este endpoint no requiere autenticación.**
   "role": "employee" // Opcional, por defecto 'employee'
 }
 ```
+
+## Restricciones de los Campos:
+
+>firstName: 
+    Mínimo 3 caracteres.
+>lastName: 
+    Mínimo 2 caracteres.
+>email: 
+    Debe ser un correo electrónico válido.
+>password: 
+    Mínimo 8 caracteres.
+
 
 **Respuesta Ejemplo:**
 ```json
