@@ -9,7 +9,8 @@
     "start": "node api/index.js", 
     "migrations:generate": "sequelize-cli migration:generate --name",
     "migrations:run":  "sequelize-cli db:migrate",
-    "migrations:revert":  "sequelize-cli db:migrate:undo"
+    "migrations:revert":  "sequelize-cli db:migrate:undo",
+    "start-with-migrations": "pnpm run migrations:run && pnpm start"
   },
   "keywords": [],
   "author": "",

@@ -54,8 +54,6 @@ module.exports = {
           password, // Aquí deberías implementar el hash de la contraseña
           userId: user.id
         }, { transaction: t });
-
-        // const { password: _, ...userWithoutPassword } = user.toJSON();
       
         return user;
       } catch (error) {
