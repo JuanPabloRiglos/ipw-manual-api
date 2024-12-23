@@ -38,7 +38,7 @@ async function getOne(req, res, next){
          response.success(req, res, usersInDb, 200)
       } 
       catch (error) {
-         next(boom.internal('Error al obtener al usuario requerido', error));
+         next(boom.notFound('Error al obtener al usuario requerido', error));
     };
  };
 
