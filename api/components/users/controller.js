@@ -51,7 +51,7 @@ module.exports = function (injectedStore) {
       const userFounded = await store.getOne(TABLE, userId)
       console.log('devuelve al ctlr de user',userFounded)
       if (!userFounded) {
-        throw boom.notFound('Hubo un error al intentar crear el usuario.');//x seguridad deberia decir 'Credenciales invalidas'
+        throw boom.notFound('Hubo un error al obtener el usuario.');//x seguridad deberia decir 'Credenciales invalidas'
       }
       return userFounded;
     } 

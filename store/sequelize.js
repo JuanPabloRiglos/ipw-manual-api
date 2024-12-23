@@ -8,13 +8,13 @@ module.exports = {
     return await model.findAll();
   },
 
-  async getOne(table, id) {
+  async getOne(table, id) {//busca x id
     const model = sequelize.models[table];
     if (!model) throw new Error(`Modelo ${table} no encontrado.`);
     return await model.findByPk(id);
   },
 
- async findOne(table, query) {
+ async findOne(table, query) {//busca x query. 
   console.log('llega al sequelize', table, query)
     const model = sequelize.models[table];
     if (!model) throw new Error(`Modelo ${table} no encontrado.`);
@@ -139,7 +139,7 @@ module.exports = {
           ...(authUpdate && authUpdate[1][0].dataValues),
         };
   
-         updatedUser.password = password ? "Password editado con éxito" : "No hay cambios en el password"
+         updatedUser.password =  updatedUser.password != password ? "Password editado con éxito" : "No hay cambios en el password"
         return updatedUser; // Devuelve el registro actualizado sin la contraseña
       } catch (error) {
         if (error.name === 'SequelizeUniqueConstraintError') {
