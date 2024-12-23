@@ -22,7 +22,7 @@ Está desarrollada con **Express.js** y utiliza las siguientes herramientas y li
 ---
 
 ## 📂 **Entidades**
-### **/users**
+### **/user**
 Gestiona a los usuarios.
 
 ### **/auth**
@@ -33,7 +33,7 @@ Proporciona autenticación (login). No permite modificar o eliminar registros di
 ## 🔑 **Endpoints**
 
 ### **1. Usuarios**
-#### **GET** `/users`
+#### **GET** `/user`
 Devuelve todos los usuarios registrados.
 
 **Respuesta Ejemplo:**
@@ -54,10 +54,10 @@ Devuelve todos los usuarios registrados.
 }
 ```
 
-#### **GET** `/users/:id`
+#### **GET** `/user/:id`
 Obtiene un único usuario por su `id`.
 
-#### **POST** `/users`
+#### **POST** `/user`
 Crea un nuevo usuario. **Este endpoint no requiere autenticación.**
 
 **Cuerpo del Request:**
@@ -102,13 +102,13 @@ Crea un nuevo usuario. **Este endpoint no requiere autenticación.**
 }
 ```
 
-#### **PUT** `/users/:id`
+#### **PUT** `/user/:id`
 Actualiza un usuario específico.
 
 - **Autenticación requerida**: Proveer un `Bearer Token` en el encabezado.
 - **Cuerpo del Request**: Datos a actualizar (mismos que al crear).
 
-#### **DELETE** `/users/:id`
+#### **DELETE** `/user/:id`
 Elimina un usuario específico.
 
 - **Autenticación requerida**: Proveer un `Bearer Token` en el encabezado.
