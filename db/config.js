@@ -18,6 +18,11 @@ const config = {
         host: pgsql.host,
         port:pgsql.port,
         dialect: 'postgres',
+        dialectOptions: {
+            ssl: {
+              require: true,
+              rejectUnauthorized: false, // Solo para desarrollo; quítalo en producción si puedes
+            }},
         loggin:false // Evitar mostrar logs en producción
     }
 
